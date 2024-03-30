@@ -46,6 +46,11 @@
   max-height: 100vh;
 }
 
+@media (min-width: 1800px) {
+  .hero_section_background {
+    max-height: 50vh;
+  }
+}
 @media (max-width: 900px) {
   .main_header a {
     color: var(--clr-accent-choco) !important;
@@ -354,7 +359,7 @@
   overflow-x: auto;
   display: flex;
   gap: 5rem;
-
+  justify-content: center;
   padding-inline: 2em;
 }
 .todays__discounts__container-products a {
