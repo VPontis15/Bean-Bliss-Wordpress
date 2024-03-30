@@ -1,6 +1,7 @@
 <footer>
     <div class="footer-wrapper">
-        <div><img class="logo-brand logo-footer" src="assets/images/logo-placeholder.svg" alt=""></div>
+        <div><img class="logo-brand logo-footer"
+                src="<?php echo get_theme_file_uri('/assets/images/logo-placeholder.svg') ?>" alt=""></div>
         <div class="footer-contact">
             <h3>Contact Us:</h3>
             <p>Email: <span>info@beanbliss.com</span></p>
@@ -10,11 +11,16 @@
         <div>
             <h3 class="socials-heading">Follow Us:</h3>
             <div class="socials">
-                <div><a href=""><img class="socials-icons" src="assets/images/facebook.png" alt="facebook logo"></a>
+                <div><a href=""><img class="socials-icons"
+                            src="<?php echo get_theme_file_uri("/assets/images/facebook.png")?>"
+                            alt="facebook logo"></a>
                 </div>
-                <div><a href=""><img class="socials-icons" src="assets/images/instagram2.png" alt="instagram logo"></a>
+                <div><a href=""><img class="socials-icons"
+                            src="<?php echo get_theme_file_uri("/assets/images/instagram2.png")?>"
+                            alt="instagram logo"></a>
                 </div>
-                <div><a href=""><img class="socials-icons" src="assets/images/twitter.png" alt="twitter logo"></a>
+                <div><a href=""><img class="socials-icons"
+                            src="<?php echo get_theme_file_uri("/assets/images/twitter.png")?>" alt="twitter logo"></a>
                 </div>
             </div>
         </div>
