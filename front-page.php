@@ -1,18 +1,6 @@
-<?php get_header(); ?>
 <div class="hero_section_background"></div>
-<header class="main_header layout">
-    <div>
-        <a href="#"><img class="logo-brand" src="assets/images/logo-placeholder.svg" alt="" /></a>
-    </div>
-    <nav class="main_header_navigation">
-        <menu class="">
-            <li><a class="main__header__navigation-item" href="#">Home</a></li>
-            <li><a class="main__header__navigation-item" href="#">Menu</a></li>
-            <li><a class="main__header__navigation-item" href="#">Events</a></li>
-            <li><a class="main__header__navigation-item" href="#">Contact</a></li>
-        </menu>
-    </nav>
-</header>
+<?php get_header(); ?>
+
 <main class="layout hero_section">
     <div class="column hero_section-text">
         <h1 class="">
@@ -26,7 +14,7 @@
         </div>
     </div>
     <div>
-        <img src="assets/images/final-hero-1.png" alt="" />
+        <img src="<?php echo get_theme_file_uri("/assets/images/final-hero-1.png")?>" alt="" />
     </div>
 </main>
 
@@ -38,15 +26,17 @@
 <section class="section__excelence layout">
     <div class="row section__excelence__images-div">
         <div>
-            <img loading="lazy" src="./assets/images/coffee-pouch-left.png" alt="A coffee pouch of Beans Bliss org" />
+            <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/coffee-pouch-left.png")?>"
+                alt="A coffee pouch of Beans Bliss org" />
         </div>
         <div>
-            <img loading="lazy" src="./assets/images/coffee-pouch-right.png" alt="A coffee pouch of Beans Bliss org" />
+            <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/coffee-pouch-right.png")?>"
+                alt="A coffee pouch of Beans Bliss org" />
         </div>
     </div>
     <ul class="bullet__points">
         <li class="bullet__points-li">
-            <img class="logo" src="assets/images/logo-placeholder.svg" alt="" />
+            <img class="logo" src="<?php echo get_theme_file_uri("/assets/images/logo-placeholder.svg")?>" alt="" />
             <div class="bullet__points-li--text">
                 <h3>Handpicked Selection</h3>
                 <p>
@@ -57,7 +47,7 @@
             </div>
         </li>
         <li class="bullet__points-li">
-            <img class="logo" src="assets/images/logo-placeholder.svg" alt="" />
+            <img class="logo" src="<?php echo get_theme_file_uri("/assets/images/logo-placeholder.svg")?>" alt="" />
             <div class="bullet__points-li--text">
                 <h3>Quality Assurance</h3>
                 <p>
@@ -68,7 +58,7 @@
             </div>
         </li>
         <li class="bullet__points-li">
-            <img class="logo" src="assets/images/logo-placeholder.svg" alt="" />
+            <img class="logo" src="<?php echo get_theme_file_uri("/assets/images/logo-placeholder.svg")?>" alt="" />
             <div class="bullet__points-li--text">
                 <h3>Craftsmanship and Expertise</h3>
                 <p>
@@ -79,7 +69,7 @@
             </div>
         </li>
         <li class="bullet__points-li">
-            <img class="logo" src="assets/images/logo-placeholder.svg" alt="" />
+            <img class="logo" src="<?php echo get_theme_file_uri("/assets/images/logo-placeholder.svg")?>" alt="" />
             <div class="bullet__points-li--text">
                 <h3>Small-Batch Roasting</h3>
                 <p>
@@ -108,11 +98,11 @@
             </div>
             <div class="row absolute section__excelence__images-div">
                 <div>
-                    <img loading="lazy" src="./assets/images/coffee-pouch-left.png"
+                    <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/coffee-pouch-left.png")?>"
                         alt="A coffee pouch of Beans Bliss org" />
                 </div>
                 <div>
-                    <img loading="lazy" src="./assets/images/coffee-pouch-right.png"
+                    <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/coffee-pouch-right.png")?>"
                         alt="A coffee pouch of Beans Bliss org" />
                 </div>
             </div>
@@ -126,10 +116,10 @@
                 <a href="" class="btn cold-btn">See all cold options</a>
             </div>
             <div class="relative">
-                <img loading="lazy" src="assets/images/freddo.png" alt="" />
+                <img loading="lazy" src="<?php echo get_theme_file_uri('/assets/images/freddo.png') ?>" alt="" />
             </div>
         </li>
-        <li class="tab hot">
+        <li class=" tab hot">
             <div class="tab-text">
                 <h3>
                     Warm Up with Bean Bliss: Explore Our Rich and Flavorful Hot Coffee
@@ -138,14 +128,14 @@
                 <a href="" class="btn hot-btn">See all hot options</a>
             </div>
 
-            <img loading="lazy" src="assets/images/hot-coffe.png" alt="" />
+            <img loading="lazy" src="<?php echo get_theme_file_uri('/assets/images/hot-coffe.png') ?>" alt="" />
             </div>
         </li>
     </ul>
 </section>
 <section class="todays__discounts ">
     <div class="todays__discounts__container relative">
-        <h2 class="section__header-heading todays__discounts-heading relative">Today’s Discounts</h2>
+        <h2 class="section__header-heading todays__discounts-heading ">Today’s Discounts</h2>
         <div class="todays__discounts__container-wrapper">
             <ul class="todays__discounts__container-products relative">
                 <a href="">
@@ -154,7 +144,7 @@
                         </div> <span class="todays__discounts__container-products--product--price relative">$4.50</span>
                         <div class="todays__discounts__container-products--product--img--div">
                             <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="assets/images/cappucino.png" alt="">
+                                src="<?php echo get_theme_file_uri("/assets/images/cappucino.png")?>" alt="">
                         </div>
                         <h3 class="todays__discounts__container-products--product--name">Cappucino</h3>
                     </li>
@@ -165,7 +155,7 @@
                         </div> <span class="todays__discounts__container-products--product--price relative">$5.00</span>
                         <div class="todays__discounts__container-products--product--img--div">
                             <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="assets/images/late.png" alt="">
+                                src="<?php echo get_theme_file_uri("/assets/images/late.png")?>" alt="">
                         </div>
                         <h3 class="todays__discounts__container-products--product--name">late</h3>
                     </li>
@@ -176,7 +166,7 @@
                         </div> <span class="todays__discounts__container-products--product--price relative">$6.00</span>
                         <div class="todays__discounts__container-products--product--img--div">
                             <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="assets/images/discounted-coffee.png" alt="">
+                                src="<?php echo get_theme_file_uri("/assets/images/discounted-coffee.png")?>" alt="">
                         </div>
                         <h3 class="todays__discounts__container-products--product--name">Latte</h3>
                     </li>
@@ -187,7 +177,7 @@
                         </div> <span class="todays__discounts__container-products--product--price relative">$5.50</span>
                         <div class="todays__discounts__container-products--product--img--div">
                             <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="assets/images/green-tea.png" alt="">
+                                src="<?php echo get_theme_file_uri("/assets/images/green-tea.png")?>" alt="">
                         </div>
                         <h3 class="todays__discounts__container-products--product--name">Green Tea</h3>
                     </li>
@@ -198,7 +188,7 @@
                         </div> <span class="todays__discounts__container-products--product--price relative">$4.50</span>
                         <div class="todays__discounts__container-products--product--img--div">
                             <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="assets/images/Indian-latte.png" alt="">
+                                src="<?php echo get_theme_file_uri("/assets/images/Indian-latte.png")?>" alt="">
                         </div>
                         <h3 class="todays__discounts__container-products--product--name">Espresso Late</h3>
                     </li>
@@ -240,13 +230,13 @@
     <div class="section__who-we-are__carousel">
         <ul data-slides>
             <li class="slide" data-active>
-                <img loading="lazy" src="assets/images/carousel-1.jpg" alt="">
+                <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/carousel-1.jpg")?>" alt="">
             </li>
             <li class="slide">
-                <img loading="lazy" src="assets/images/carousel-2.jpg" alt="">
+                <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/carousel-2.jpg")?>" alt="">
             </li>
             <li class="slide">
-                <img loading="lazy" src="assets/images/carousel-3.jpg" alt="">
+                <img loading="lazy" src="<?php echo get_theme_file_uri("/assets/images/carousel-3.jpg")?>" alt="">
             </li>
 
         </ul>
@@ -277,7 +267,8 @@
                     experience where the love of reading comes alive, and friendships are formed one page at a time.
                 </p>
             </div>
-            <div class="coffee-event section__events__container-img-div"><img src="assets/images/bookup-event.jpg"
+            <div class="coffee-event section__events__container-img-div"><img
+                    src="<?php echo get_theme_file_uri("/assets/images/bookup-event.jpg")?>"
                     alt="a picture of two people reading a book while drinking  coffee"></div>
         </div>
         <div class="coffee-testing-event section__events__container">
@@ -293,7 +284,8 @@
                     carefully sourced coffees. Join us at Bean Bliss and elevate your coffee experience to new
                     heights with our engaging and immersive Coffee Tasting Events.</p>
             </div>
-            <div class="section__events__container-img-div"><img src="assets/images/coffee-event.jpg"
+            <div class="section__events__container-img-div"><img
+                    src="<?php echo get_theme_file_uri("/assets/images/coffee-event.jpg")?>"
                     alt="a picture of two people reading a book while drinking  coffee"></div>
         </div>
         <div class="micup-event  section__events__container">
@@ -308,7 +300,8 @@
                     an evening of entertainment, inspiration, and community at Coffee Bliss's Open Mic Nights—where
                     every performance is celebrated and every talent shines bright.</p>
             </div>
-            <div class="section__events__container-img-div"><img src="assets/images/micup-event.jpg"
+            <div class="section__events__container-img-div"><img
+                    src="<?php echo get_theme_file_uri("/assets/images/micup-event.jpg")?>"
                     alt="a picture of two people reading a book while drinking  coffee">
             </div>
         </div>
