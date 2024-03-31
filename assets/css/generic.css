@@ -8,7 +8,7 @@
 
 :root {
   /* brand colors */
-  --clr-bg-body: #fff1f0;
+  --clr-bg-body: #ffebea;
   --clr-bg-discounts: rgb(170, 97, 88, 0.24);
   --clr-text-headings: #833c33;
   --clr-text-body: #833c33;
@@ -260,4 +260,12 @@ h2 {
     margin-left: auto;
     margin-top: 2rem;
   }
+}
+
+.see-post-link {
+  color: var(--clr-text-headings);
+}
+
+.text-center {
+  text-align: center;
 }

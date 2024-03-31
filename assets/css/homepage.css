@@ -733,3 +733,50 @@ footer h3 {
     text-align: center;
   }
 }
+
+.upcoming-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-block: 4em;
+}
+
+.event_card {
+  border: 2px solid var(--clr-accent-green);
+  border-radius: 15px;
+  padding: 1.5em;
+}
+.event_card h3 {
+  margin-top: 0.75rem;
+  line-height: 1.3;
+}
+
+.event_card-img {
+  border-radius: 15px;
+
+  width: 100%;
+  object-fit: cover;
+}
+
+.events-page {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.category_ul {
+  margin-bottom: 0.25rem;
+}
+
+.category-list-item {
+  text-align: end;
+}
+
+.category-link {
+  color: var(--clr-accent-blue-dark);
+  margin-bottom: 1rem;
+}
+
+.card-read-more {
+  color: var(--clr-accent-blue-dark);
+}

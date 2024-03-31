@@ -305,7 +305,7 @@
                     alt="a picture of two people reading a book while drinking  coffee">
             </div>
         </div>
-        <a href="" class="btn events-btn cta-btn">See upcoming events</a>
+        <a href="<?php echo esc_url(site_url( '/events' )) ?>" class="btn events-btn cta-btn">See upcoming events</a>
     </div>
     </div>
     </div>

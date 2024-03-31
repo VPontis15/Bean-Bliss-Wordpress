@@ -15,6 +15,7 @@ function bean_bliss_features(){
 function events_post_type() {
 register_post_type( 'Events', array(
     'supports'=> array('title', 'editor', 'thumbnail', 'excerpt'),
+    'taxonomies' => array('category'),
     'labels' => array(
         'name' => 'Events',
         'singular_name' => 'Event',
@@ -31,8 +32,18 @@ register_post_type( 'Events', array(
     'menu_icon'=> 'dashicons-calendar-alt',
     'has_archive'=> true,
     'show_in_rest' => true));
+    
 
 }
+
+
+
+
+add_image_size( "event-thumbnail", 600, 400, true );
+add_image_size( "event-full", 1080, 1920, true );
+
+
+
 
 add_action('init', 'events_post_type');
 
