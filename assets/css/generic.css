@@ -42,16 +42,11 @@ menu {
   list-style: none;
 }
 
-li a:link,
-li a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-a:link,
+/* a:link,
 a:visited {
   color: #fff;
   text-decoration: none;
-}
+} */
 
 img,
 svg {
@@ -167,7 +162,7 @@ h2 {
 }
 
 .main_header a {
-  color: #fff;
+  color: var(--clr-accent-choco);
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;

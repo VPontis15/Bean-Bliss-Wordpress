@@ -14,6 +14,9 @@
   font-size: 1.3rem;
 }
 
+.page-id-8 .main__header__navigation-item {
+  color: #fff;
+}
 .hero_section_background {
   position: absolute;
   background-color: var(--clr-accent-choco);
