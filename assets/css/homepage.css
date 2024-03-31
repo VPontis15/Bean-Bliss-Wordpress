@@ -1,26 +1,3 @@
-.main_header {
-  display: flex;
-  padding-block: 1em;
-  justify-content: space-between;
-  position: relative;
-  align-items: center;
-}
-
-.main_header .main_header_navigation menu {
-  display: flex;
-  gap: 4rem;
-}
-
-.main_header a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.main_header .main_header_navigation .main__header__navigation-item:hover {
-  color: var(--clr-accent-green);
-}
-
 .hero_section {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -60,6 +37,19 @@
   }
   .main_header a:hover {
     color: var(--clr-accent-green) !important;
+  }
+
+  @media (max-width: 600px) {
+    .main_header_navigation-mobile {
+      display: block;
+    }
+    .main_header_navigation {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
   }
 
   .hero_section {

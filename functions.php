@@ -3,7 +3,8 @@
 function bean_bliss_files(){
 wp_enqueue_style('bliss_styles', get_theme_file_uri() . '/assets/css/generic.css', array(), 'Version 1','all');
 wp_enqueue_style('bliss_styles-main', get_theme_file_uri() . '/assets/css/homepage.css', array(), 'Version 1','all');
-wp_enqueue_script('bliss_carousel', get_theme_file_uri( ) . '/assets/js/carousel.js', array(), 'Version 1', 'all');
+wp_enqueue_script('bliss_carousel', get_theme_file_uri( ) . '/assets/js/carousel.js', array(), 'Version 1', 'all',false, true);
+wp_enqueue_script('bliss_main-js', get_theme_file_uri( ) . '/assets/js/main.js', array(), 'Version 1', 'all',false, true);
 }
 
 function bean_bliss_features(){

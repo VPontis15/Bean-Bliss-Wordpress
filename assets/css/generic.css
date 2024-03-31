@@ -145,14 +145,117 @@ h2 {
 
 .relative {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .absolute {
   position: absolute;
   bottom: -50px;
   right: -60px;
+}
+
+.main_header {
+  display: flex;
+  padding-block: 1em;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.main_header .main_header_navigation menu {
+  display: flex;
+  gap: 4rem;
+}
+
+.main_header a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main_header_navigation_mobile-button,
+.main_header_navigation-mobile {
+  display: none;
+}
+
+.main_header .main_header_navigation .main__header__navigation-item:hover {
+  color: var(--clr-accent-green);
+}
+
+.hamburger {
+  position: relative;
+  display: none;
+  width: 35px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--clr-accent-choco);
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.main_header_navigation-mobile {
+  position: fixed;
+  top: 5rem;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.main_header_navigation-mobile.is-active {
+  left: 0;
+}
+
+.main_header_navigation-mobile .main__header__navigation-item-mobile {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  color: white !important;
+  text-decoration: none;
+}
+
+.hamburger-sticky {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  z-index: 99;
+}
+
+.main_header_navigation-mobile .main__header__navigation-item-mobile:hover {
+  background-color: var(--clr-accent-green);
+  color: #fff !important;
 }
 
 @media (max-width: 750px) {

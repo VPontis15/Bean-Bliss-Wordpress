@@ -27,7 +27,7 @@
         <div>
             <nav>
                 <menu class="footer__extra__links">
-                    <li><a href=""></a>Unsubscribe</li>
+                    <li><a href="">Unsubscribe</a></li>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms of Service</a></li>
                 </menu>

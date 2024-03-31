@@ -22,6 +22,21 @@
                     href="<?php echo esc_url(home_url( '/contact' )) ?>">Contact</a></li>
         </menu>
     </nav>
+    <nav class="main_header_navigation-mobile relative">
+
+
+        <a class="main__header__navigation-item-mobile" href="<?php echo esc_url(home_url( '/' )) ?>">Home</a>
+        <a class="main__header__navigation-item-mobile" href="<?php echo esc_url(home_url( '/menu' )) ?>">Menu</a>
+        <a class="main__header__navigation-item-mobile" href="<?php echo esc_url(home_url( '/events' )) ?>">Events</a>
+
+        <a class="main__header__navigation-item-mobile" href="<?php echo esc_url(home_url( '/contact' )) ?>">Contact</a>
+
+
+    </nav>
+    <button class="hamburger">
+        <div class="bar"></div>
+    </button>
+
 </header>
 
 <body>
