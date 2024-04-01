@@ -10,14 +10,11 @@
 <main class="layout upcoming-events">
 
     <?php
-    $args = array(
-        'post_type' => 'events',
-        'posts_per_page' => -1,
-    );
-    $events = new WP_Query($args);
+  
+   
 
-    while ($events->have_posts()) {
-        $events->the_post(); ?><div class="event_card">
+    while (have_posts()) {
+        the_post(); ?><div class="event_card">
         <?php if (has_post_thumbnail( )): ?>
         <div>
             <img class="event_card-img" src="<?php  the_post_thumbnail_url('event-thumbnail' ); ?>"
@@ -40,12 +37,15 @@ if ($categories) {
 ?>
 
         </div>
-        <p><?php the_excerpt(); ?></p>
+
+        <p><?php the_excerpt(); the_field('event_date'); ?></p>
         <a class=" card-read-more " href="<?php the_permalink(); ?>">Read more</a>
     </div><?php
-    }
-    wp_reset_postdata();
-    ?>
+    }?>
+    <div>
+        <?php echo paginate_links(  ); ?></div>
+    <?php  wp_reset_postdata();?>
+
 
 </main>
 
