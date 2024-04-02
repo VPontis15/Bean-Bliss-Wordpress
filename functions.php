@@ -14,7 +14,7 @@ function bean_bliss_features(){
 
 function events_post_type() {
 register_post_type( 'Events', array(
-    'supports'=> array('title', 'editor', 'thumbnail', 'excerpt'),
+    'supports'=> array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
     'taxonomies' => array('category'),
     'labels' => array(
         'name' => 'Events',
@@ -24,17 +24,38 @@ register_post_type( 'Events', array(
         'add_new_item' => "Add new Event",
         'edit_item'=> "Edit Event",
         "view_item"=> "View Event",
-        "search_items"=> "Search Events",
+        "search_items"=> "Search events",
         "not_found"=> "No events found"
 
        
     ), 'public'=> true,
     'menu_icon'=> 'dashicons-calendar-alt',
     'has_archive'=> true,
+    'paged' => true,
     'show_in_rest' => true));
     
 
 }
+
+function bean_bliss_adjusted_queries($query){
+    if(!is_admin() AND is_post_type_archive( 'events' ) AND $query->is_main_query()){
+        $today = date('Ymd');
+        $query->set('meta_key', 'event_date');
+        $query->set('orderby', 'meta_value_num');
+        $query->set('order', 'ASC');
+        $query->set('meta_query',array(
+            array(
+                'key'=> 'event_date',
+                'compare'=> '>=',
+                'value'=> $today,
+                'type'=> 'numeric'
+            )
+        ));
+    }
+
+}
+
+add_action('pre_get_posts','bean_bliss_adjusted_queries');
 
 
 

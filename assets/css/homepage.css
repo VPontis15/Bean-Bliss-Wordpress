@@ -150,7 +150,6 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 3em;
   row-gap: 2.5em;
-  align-items: center;
 }
 
 .bullet__points-li {
@@ -736,9 +735,10 @@ footer h3 {
 
 .upcoming-events {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 550px));
   gap: 2.5rem;
   margin-block: 4em;
+  justify-content: center;
 }
 
 .event_card {
@@ -769,14 +769,44 @@ footer h3 {
 }
 
 .category-list-item {
-  text-align: end;
 }
 
 .category-link {
   color: var(--clr-accent-blue-dark);
   margin-bottom: 1rem;
+  background-color: var(--clr-accent-green);
+  color: #fff;
+  padding: 0.75em 2em;
+  border-radius: 15px;
 }
 
 .card-read-more {
   color: var(--clr-accent-blue-dark);
+}
+
+.event_meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1em;
+}
+
+.bookup-link {
+}
+
+.upcoming__events__cat-title {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.single_event_overlay {
+  opacity: 0.3;
+  object-fit: cover;
+}
+
+.main_content p {
+  line-height: 1.75;
+}
+.main_content > p + p {
+  margin-bottom: 0.75rem;
 }
