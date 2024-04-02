@@ -138,61 +138,61 @@
         <h2 class="section__header-heading todays__discounts-heading ">Today’s Discounts</h2>
         <div class="todays__discounts__container-wrapper">
             <ul class="todays__discounts__container-products relative">
-                <a href="">
+                <?php
+// Custom query to retrieve products on sale
+$args = array(
+    'post_type'      => 'product',
+    'posts_per_page' => -1,
+    'meta_query'     => array(
+        'relation' => 'OR',
+        array( // Simple products type
+            'key'           => '_sale_price',
+            'value'         => 0,
+            'compare'       => '>',
+            'type'          => 'numeric'
+        ),
+        array( // Variable products type
+            'key'           => '_min_variation_sale_price',
+            'value'         => 0,
+            'compare'       => '>',
+            'type'          => 'numeric'
+        )
+    )
+);
+
+$products_on_sale = new WP_Query( $args );
+
+
+if ( $products_on_sale->have_posts() ) :
+    while ( $products_on_sale->have_posts() ) : $products_on_sale->the_post();
+        ?><a href="<?php the_permalink( ) ?>">
                     <li class="todays__discounts__container-products--product relative">
                         <div class="price-div">
-                        </div> <span class="todays__discounts__container-products--product--price relative">$4.50</span>
+                        </div> <span
+                            class="todays__discounts__container-products--product--price relative"><?php echo wc_price( get_post_meta( get_the_ID(), '_sale_price', true ) ); ?></span>
                         <div class="todays__discounts__container-products--product--img--div">
+                            <?php $thumbnail_url = get_the_post_thumbnail_url(); ?>
+                            <?php if ($thumbnail_url): ?>
                             <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="<?php echo get_theme_file_uri("/assets/images/cappucino.png")?>" alt="">
+                                src="<?php echo esc_url($thumbnail_url); ?>"
+                                alt="<?php echo esc_attr(get_the_title()); ?>">
+                            <?php endif; ?>
                         </div>
-                        <h3 class="todays__discounts__container-products--product--name">Cappucino</h3>
+
+
+                        <h3 class="todays__discounts__container-products--product--name"><?php the_title(); ?></h3>
                     </li>
                 </a>
-                <a href="">
-                    <li class="todays__discounts__container-products--product relative">
-                        <div class="price-div">
-                        </div> <span class="todays__discounts__container-products--product--price relative">$5.00</span>
-                        <div class="todays__discounts__container-products--product--img--div">
-                            <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="<?php echo get_theme_file_uri("/assets/images/late.png")?>" alt="">
-                        </div>
-                        <h3 class="todays__discounts__container-products--product--name">late</h3>
-                    </li>
-                </a>
-                <a href="">
-                    <li class="todays__discounts__container-products--product relative">
-                        <div class="price-div">
-                        </div> <span class="todays__discounts__container-products--product--price relative">$6.00</span>
-                        <div class="todays__discounts__container-products--product--img--div">
-                            <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="<?php echo get_theme_file_uri("/assets/images/discounted-coffee.png")?>" alt="">
-                        </div>
-                        <h3 class="todays__discounts__container-products--product--name">Latte</h3>
-                    </li>
-                </a>
-                <a href="">
-                    <li class="todays__discounts__container-products--product relative">
-                        <div class="price-div">
-                        </div> <span class="todays__discounts__container-products--product--price relative">$5.50</span>
-                        <div class="todays__discounts__container-products--product--img--div">
-                            <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="<?php echo get_theme_file_uri("/assets/images/green-tea.png")?>" alt="">
-                        </div>
-                        <h3 class="todays__discounts__container-products--product--name">Green Tea</h3>
-                    </li>
-                </a>
-                <a href="">
-                    <li class="todays__discounts__container-products--product relative">
-                        <div class="price-div">
-                        </div> <span class="todays__discounts__container-products--product--price relative">$4.50</span>
-                        <div class="todays__discounts__container-products--product--img--div">
-                            <img loading="lazy" class="todays__discounts__container-products--product--img"
-                                src="<?php echo get_theme_file_uri("/assets/images/Indian-latte.png")?>" alt="">
-                        </div>
-                        <h3 class="todays__discounts__container-products--product--name">Espresso Late</h3>
-                    </li>
-                </a>
+                <?php
+        
+        
+        endwhile;
+        wp_reset_postdata();
+        else :
+        echo 'No products on sale.';
+        endif;
+        ?>
+
 
 
             </ul><a href="" class="btn cta-btn menu">See our menu</a>
