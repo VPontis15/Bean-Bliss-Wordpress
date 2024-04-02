@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
-<?php the_title() ?>;
-<?php the_content() ?>;
-
+<div class="layout">
+    <?php the_content() ?>;
+</div>
 
 <?php get_footer() ?>

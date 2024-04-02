@@ -71,3 +71,31 @@ add_action('init', 'events_post_type');
 add_action('after_setup_theme', 'bean_bliss_features');
 
 add_action('wp_enqueue_scripts', 'bean_bliss_files');
+
+
+function webkul_add_woocommerce_support() {
+    //Add WoocCommerce theme support to our theme
+    add_theme_support( 'woocommerce' );
+    // To enable gallery features add WooCommerce Product zoom effect, lightbox and slider support to our theme
+
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'webkul_add_woocommerce_support' );
+
+
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce', array(
+		'thumbnail_image_width' => 450,
+		'single_image_width'    => 200,
+        'product_grid'          => array(
+            'default_rows'    => 3,
+            'min_rows'        => 2,
+            'max_rows'        => 8,
+            'default_columns' => 6,
+            'min_columns'     => 2,
+            'max_columns'     => 8,
+        ),
+	) );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
